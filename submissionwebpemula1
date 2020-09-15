@@ -1,0 +1,380 @@
+.contact-main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .contact-text {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .accent-text {
+    color: #BC3A80;
+  }
+
+  .contact {
+    background-color: #202027;
+    width: 50vw;
+    max-width: 50%;
+    padding: 2rem 4rem;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+
+  @media (max-width: 900px) {
+    .contact-main-section {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
+
+  .contact-page-circle-1 {
+    position: absolute;
+    overflow: hidden;
+    width: 35vw;
+    height: 35vw;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .contact-page-circle-1::before {
+    content: '';
+    transform: translateX(-20%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgb(188, 58, 128, .1);
+  }
+
+  .contact-page-circle-2 {
+    position: absolute;
+    overflow: hidden;
+    width: 30vw;
+    height: 30vw;
+    top: 0;
+    left: 20vw;
+    z-index: -1;
+  }
+
+  .contact-page-circle-2::before {
+    content: '';
+    transform: translateY(-30%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgb(52, 87, 178, .1);
+  } 
+ 45  contacts.html 
+@@ -0,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="contacs.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contacts</title>
+</head>
+<body>
+    <body class="full-height-grow">
+         <div class="container full-height-grow">
+             <header class="main-header">
+                 <div class="brand-logo"> 
+                      <img src="images/logo-dicoding.png">
+                              <div class="brand-logo-name">KONTAK SAYA</div>
+                                </div>
+                                    <nav class="main-nav">
+                                      <ul>
+                                        <li><a href="http://www.facebook.com/riskyzhalovena" target="_blank"><img src="images/fb.png"></a></li>
+                                        <li><a href="http://www.github.com/rizkyalfiansyah" target="_blank"><img src="images/github.png"></a></li>
+                                      </ul>
+                                    </nav>
+             </header>
+                  <section class="contact-main-section">
+                    <h1 class="contact-text">
+                      Ini Kontak saya
+                      <span class="accent-text">Gais</span>
+                    </h1>
+                    <ul class="contact">
+                            <li>Phone     : +62 82290139151</li>
+                            <li>Email     : rizkkyaf@gmail.com</li>
+                            <li>Github    : RizkyAlfiansyah</li>
+                            <li>Facebook  : Rizky Alfiansyah</li>
+                            <li>Instagram : RizkyAlfnsyah</li>
+
+                    </ul>
+                  </section>
+                </div>  
+                <div class="contact-page-circle-1"></div>
+                <div class="contact-page-circle-2"></div>
+
+</body>
+</html> 
+ BIN +59.3 KB images/fb.png 
+Binary file not shown.
+ BIN +11.3 KB images/github.png 
+Binary file not shown.
+ BIN +7.29 KB images/logo-dicoding.png 
+Binary file not shown.
+ BIN +274 KB images/profile.png 
+Binary file not shown.
+ 84  index.css 
+@@ -0,0 +1,84 @@
+.home-main-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .home-main-section .img-wrapper {
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+
+  .home-main-section .image {
+    background-image: url(images/profile.png);
+    flex-grow: 1;
+    max-height: 100vh;
+    min-width: 40vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+
+  .home-main-section .call-to-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem;
+    align-self: center;
+  }
+
+  @media (max-width: 900px) {
+    .home-main-section .img-wrapper {
+      display: none;
+    }
+
+    .home-main-section {
+      justify-content: center;
+    }
+  }
+
+  .home-page-circle-1 {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: rgb(212, 14, 14);
+    bottom: 5vw;
+    left: 5vw;
+    z-index: -1;
+  }
+
+  .home-page-circle-2 {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: rgba(47, 106, 233, 0.863);
+    top: 15vh;
+    left: 30vw;
+    z-index: -1;
+  }
+
+  .home-page-circle-3 {
+    position: absolute;
+    overflow: hidden;
+    width: 45vw;
+    height: 45vw;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .home-page-circle-3::before {
+    content: '';
+    transform: translate(40%, 40%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgba(188, 190, 12, 0.521);
+  } 
+ 41  index.html 
+@@ -0,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <title>MY PERSONAL INFORMATION</title>
+</head>
+<body class="container full-height-grow">
+  <header class="main-header">
+    <div class="brand-logo"> 
+      <img src="images/logo-dicoding.png">
+      <div class="brand-logo-name">Submission Web Pemula</div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="http://www.facebook.com/riskyzhalovena" target="_blank"><img src="images/fb.png"></a></li>
+        <li><a href="http://www.github.com/rizkyalfiansyah" target="_blank"><img src="images/github.png"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="home-main-section">
+    <div class="img-wrapper">
+      <div class="image"></div>
+    </div>
+    <div class="call-to-action">
+      <h1 class="title">MY PERSONAL INFORMATION</h1>
+      <span class="subtitle">Hello, my name is Rizky Alfiansyah. I am 21 years old. I was born in Bone, September 7th 1998. I live in Desa Mattiro Bulu, Kec. Libureng, Kab. Bone. My nationality is Indonesia, and my religion is Islam. Currently, I am studying in Hasanuddin University Makassar. Playing Game is my hobby, i like to play Mobile legend. I have a dream to be a part of Google Company.</span>
+      <a href="Contacts.html" target="_blank" class="btn">Contacs</a>
+    </div>
+  </section>
+
+  <div class="home-page-circle-1"></div>
+  <div class="home-page-circle-2"></div>
+  <div class="home-page-circle-3"></div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
+ 3  script.js 
+@@ -0,0 +1,3 @@
+const judul = document.getElementsByClassName('brand-logo-name')[0];
+judul.innerHTML = '<em> SUBMISSION WEB PEMULA </em>';
+judul.style.color = 'blue'; 
+ 115  styles.css 
+@@ -0,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(46, 56, 112, 0.596);
+  font-family: Poppins, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  min-height: 100vh;
+}
+
+img{
+  max-width: 50px;
+  height: auto;
+}
+
+.full-height-grow {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-logo-name {
+  float: left;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.main-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a{
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.main-nav a:hover {
+  color: #adadad;
+}
+
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header {
+  height: 140px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  flex-grow: 1;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-left: 1rem;
+}
+
+.subtitle {
+  text-align: justify;
+  font-weight: 500;
+  font-size: 1em;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.btn {
+    color: white;
+    background-color: #1762A7;
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: .9rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+  .btn:hover {
+    background-color: #2180d8;
+  }
+
+  .btn:focus {
+    background-color: #2796ff;
+  } 
